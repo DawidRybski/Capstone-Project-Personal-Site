@@ -1,0 +1,193 @@
+:root{
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 1rem;
+    --spacing-4: 1.5rem;
+    --spacing-5: 2rem;
+    --spacing-6: 3rem;
+    --spacing-7: 5rem;
+
+    --primary-color: #088395;
+    --secondary-color: #7AB2B2;
+    --background-color: #EBF4F6;
+
+    --graphic-xs: 30px;
+    --graphic-sm: 50px;
+    --graphic-md: 70px;
+    --graphic-lg: 100px;
+    --graphic-xl: 150px;
+    --graphic-2xl: 200px;
+}
+
+
+body{
+    font-size: 12px;
+}
+
+.hero-container{
+    position: relative;
+    background-color: var(--background-color);
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.title{
+    text-align: center;
+    padding: var(--spacing-6);
+}
+
+.title h2{
+    color: var(--secondary-color);
+}
+
+h1{
+    font-family: Caveat;
+    color: var(--primary-color);
+}
+
+h2{
+    color: var(--primary-color);
+    padding: var(--spacing-4);
+}
+
+h3{
+    color: #7AB2B2;
+}
+
+.sun{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    height: var(--graphic-sm);
+}
+
+.clouds{
+    position: absolute;
+    right: 20%;
+    top: 20%;
+    height: var(--graphic-xs);
+}
+
+.ship{
+    position: absolute;
+    left: 10%;
+    height: var(--graphic-xl);
+    bottom: 0;
+}
+
+.portrait{
+    border-radius: 50%;
+    height: var(--graphic-lg);
+}
+
+.middle-container p{
+    padding-bottom: var(--spacing-6);
+}
+
+div{
+    display: block;
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testing, .sailing{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-1);
+    align-items: center;
+}
+
+.testing-skills p, .sailing-skills p{
+  text-align: left;
+}
+
+.contact-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.software-testing img, .sailing-ship img{
+    height: var(--graphic-sm);
+}
+
+.contact-button{
+    border: none;
+    background-image: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+    padding: var(--spacing-2) var(--spacing-3);
+    border-radius: 0.25rem;
+    color: white;
+}
+
+.contact-button:hover{
+    background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+}
+
+.contact-button:active{
+    background-image: linear-gradient(to bottom, var(--secondary-color), #9dc9c9);
+}
+
+.footer-container{
+    background-color: var(--background-color);
+}
+
+.footer-container a{
+    color: var(--primary-color);
+}
+
+.footer-container a:hover{
+    color: var(--secondary-color);
+}
+
+hr{
+  border-top: 2px solid var(--secondary-color);
+  width: 60%;
+  margin: var(--spacing-6) auto;
+  position: relative;
+}
+
+@media (min-width: 781px){
+    body{
+        font-size: 15px;
+    }
+
+    .hero-container{
+        padding-bottom: 250px;
+    }
+
+    .sun{
+        top: 5%;
+        height: var(--graphic-xl);
+    }
+
+    .ship{
+        height: var(--graphic-2xl);
+        left: 20%;
+    }
+
+    .clouds{
+        height: var(--graphic-md);
+    }
+
+    .title{
+        padding: var(--graphic-lg);
+    }
+
+    .profile p{
+        width: 30%;
+    }
+
+    .portrait{
+        height: var(--graphic-2xl);
+    }
+
+    .testing, .sailing, .contact{
+        justify-content: center;
+        max-width: 30%;
+    }
+}
